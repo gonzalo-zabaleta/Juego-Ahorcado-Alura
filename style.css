@@ -1,0 +1,199 @@
+body{
+
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    font-family: 'Inter', sans-serif;
+    background: #F3F5FC;
+    margin: auto;
+}
+
+/*Modificaciones para la primer pantalla*/
+.logo-alura{
+
+    padding: 0 44px;
+    margin-top: 40px;
+}
+
+.contenedor-botones-inicio{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 202px;
+}
+
+.boton-iniciar{
+
+    width: 317px;
+    height: 114px;
+    border: none;
+    border-radius: 24px;
+    padding: 24px;
+    background: #0A3871;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    margin: 38px;
+}
+
+.boton-agregar{
+
+    width: 280px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    color: #0A3871;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*Modificaciones para cuando se quiere agregar una nueva palabra*/
+
+.contenedor-agregar-palabra{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+.input-texto{
+
+    position: absolute;
+    width: 299px;
+    height: 48px;
+    left: 376px;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    border: none;
+    background: #F3F5FC;
+}
+
+.mensaje-a-mostrar{
+
+    position: absolute;
+    top: 200px;
+    left: 376px;
+    font-size: 32px;
+    visibility: hidden;
+}
+
+.contenedor-advertencia{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 376px;
+    top: 367px;
+}
+
+.contenedor-advertencia p{
+
+    font-size: 12px;
+    opacity: 0.8;
+    margin-left: 8px;
+}
+
+.contenedor-botones-agregar{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    left: 376px;
+    top: 383px;
+    margin-top: 16px;
+}
+
+.boton-guardar{
+
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    background: #0A3871;
+    border: none;
+    border-radius: 24px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton-cancelar{
+
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 24px;
+}
+
+/*Modificaciones cuando se inicie el juego*/
+
+.contenedor-juego{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    align-items: center;
+    top: -300px;
+    visibility: hidden;
+}
+
+.contenedor-botones-juego{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 100px;
+}
+
+.boton-nuevo{
+
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    border: none;
+    border-radius: 24px;
+    background: #0A3871;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton-desistir{
+
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 24px;
+}
+
+/*Clases para mostrar y esconder*/
+
+.mostrar{
+
+    visibility: visible;
+}
+
+.esconder{
+
+    visibility: hidden;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8">
+        <title>Juego Ahorcado - Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+
+            <img class="logo-alura" src="images/logo-alura.png" alt="Logo de Alura">
+            <div id="contenedor-botones-inicio" class="contenedor-botones-inicio">
+                <input id="boton-iniciar" class="boton-iniciar" type="submit" value="Inicar juego">
+                <input id="boton-agregar" class="boton-agregar" type="submit" value="Agregar nueva palabra">
+            </div>
+
+            <div id="contenedor-agregar-palabra" class="contenedor-agregar-palabra">
+                <input id="palabra-ingresada" class="input-texto" type="text" placeholder="Ingrese una palabra" maxlength="8">
+                <span id="mensaje-a-mostrar" class="mensaje-a-mostrar"></span>
+                <div class="contenedor-advertencia">
+                    <img src="images/logo-advertencia.png" alt="Logo de advertencia">
+                    <p>Máx. de 8 letras</p>
+                </div>
+                <div class="contenedor-botones-agregar">
+                    <input id="boton-guardar" class="boton-guardar" type="submit" value="Guardar y empezar">
+                    <input id="boton-cancelar-agregar" class="boton-cancelar" type="submit" value="Cancelar">
+                </div>
+            </div>
+
+            <div id="contenedor-juego" class="contenedor-juego">
+                <canvas id="canvas" width="600px" height="700px"></canvas>
+                <div class="contenedor-botones-juego">
+                    <input id="boton-nuevoJuego" class="boton-nuevo" type="submit" value="Nuevo juego">
+                    <input id="boton-desistir" class="boton-desistir" type="submit" value="Desistir">
+                </div>
+            </div>
+        </main>
+        <script src="js/juego.js"></script>
+        <script src="js/dibujos.js"></script>
+        <script src="js/iniciar-juego.js"></script>
+        <script src="js/agregar-palabras.js"></script>
+        <script src="js/desistir.js"></script>
+    </body>
+
+</html>
