@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head lang="es">
-        <meta charset="UTF-8">
-        <title>Juego Ahorcado - Alura</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Ahorcado - Alura</title>
 
-    <body>
-        <main>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-            <img class="logo-alura" src="images/logo-alura.png" alt="Logo de Alura">
-            <div id="contenedor-botones-inicio" class="contenedor-botones-inicio">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="css/base/base.css">
+    <link rel="stylesheet" href="css/encabezado/encabezado.css">
+    <link rel="stylesheet" href="css/principal/principal.css">
+    <link rel="stylesheet" href="css/principal/contenedor_botones-inicio/contenedor_botones-inicio.css">
+    <link rel="stylesheet" href="css/principal/contenedor-agregar-palabra/contenedor-agregar-palabra.css">
+    <link rel="stylesheet" href="css/principal/contenedor-juego/contenedor-juego.css">
+
+</head>
+    <body class="base">
+        <header class="encabezado">
+            <h1 class="titulo-encabezado"><a class="enlace-encabezado" href="index.html"><img class="logo-alura" src="images/logo-alura.png" alt="Logo de Alura"></a></h1>
+        </header>
+        <main class="principal">
+            <div id="contenedor-botones-inicio" class="contenedor_botones-inicio">
                 <input id="boton-iniciar" class="boton-iniciar" type="submit" value="Inicar juego">
                 <input id="boton-agregar" class="boton-agregar" type="submit" value="Agregar nueva palabra">
             </div>
 
             <div id="contenedor-agregar-palabra" class="contenedor-agregar-palabra">
                 <input id="palabra-ingresada" class="input-texto" type="text" placeholder="Ingrese una palabra" maxlength="8">
-                <span id="mensaje-a-mostrar" class="mensaje-a-mostrar"></span>
+                <span id="mensaje-a-mostrar" class="mensaje-a-mostrar">hola</span>
                 <div class="contenedor-advertencia">
-                    <img src="images/logo-advertencia.png" alt="Logo de advertencia">
-                    <p>Máx. de 8 letras</p>
+                    <img class="logo_advertencia" src="images/logo-advertencia.png" alt="Logo de advertencia">
+                    <p class="descripcion_advertencia">Máx. de 8 letras</p>
                 </div>
                 <div class="contenedor-botones-agregar">
                     <input id="boton-guardar" class="boton-guardar" type="submit" value="Guardar y empezar">
@@ -33,7 +44,8 @@
             </div>
 
             <div id="contenedor-juego" class="contenedor-juego">
-                <canvas id="canvas" width="600px" height="700px"></canvas>
+                <canvas id="canvas" class="canvas" width="600px" height="700px"></canvas>
+                <input id="input-letra-celular" class="input_letra-celular" type="text" placeholder="Ingrese la letra">
                 <div class="contenedor-botones-juego">
                     <input id="boton-nuevoJuego" class="boton-nuevo" type="submit" value="Nuevo juego">
                     <input id="boton-desistir" class="boton-desistir" type="submit" value="Desistir">
@@ -46,5 +58,4 @@
         <script src="js/agregar-palabras.js"></script>
         <script src="js/desistir.js"></script>
     </body>
-
 </html>

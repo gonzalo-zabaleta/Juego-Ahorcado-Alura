@@ -1,16 +1,20 @@
 //Declaración del primer boton que aparece.
-var agregarPalabra = document.getElementById("boton-agregar");
+const agregarPalabra = document.getElementById("boton-agregar");
 
 //Declaración de los botones que deben aparecer a continuación.
-var contenedorBotonesAgregar = document.getElementById("contenedor-agregar-palabra");
-var botonGuardarPalabra = document.getElementById("boton-guardar");
-var botonCancelarAgregar = document.getElementById("boton-cancelar-agregar");
+const contenedorBotonesAgregar = document.getElementById("contenedor-agregar-palabra");
+const botonGuardarPalabra = document.getElementById("boton-guardar");
+const botonCancelarAgregar = document.getElementById("boton-cancelar-agregar");
 
 //Declaración del input.
-var textoIngresado = document.getElementById("palabra-ingresada");
+const textoIngresado = document.getElementById("palabra-ingresada");
 
 //Declaración para mostrar un mensaje en caso de bien o mal.
-var mensajeAMostrar = document.getElementById("mensaje-a-mostrar");
+const mensajeAMostrar = document.getElementById("mensaje-a-mostrar");
+
+//Escondiendo los contenedor que no se deben mostrar.
+contenedorBotonesAgregar.classList.add("esconder");
+mensajeAMostrar.classList.add("esconder");
 
 //Evento del primer boton que aparece para que muestre los otros.
 agregarPalabra.addEventListener("click", function(){
@@ -65,7 +69,11 @@ function tieneNumeros(palabraNueva){
 //Función para agregar la nueva palabra.
 function agregarNuevaPalabra(palabraNueva){
 
-    if (tieneNumeros(palabraNueva)){
+    if(palabraNueva.trim() == ""){
+
+        mensajePorMostrar("red", "Por favor, ingrese una palabra.");
+
+    } else if (tieneNumeros(palabraNueva)){
 
         mensajePorMostrar("red", "Ingrese solo las letras, sin números.");
 

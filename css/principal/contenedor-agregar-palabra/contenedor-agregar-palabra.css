@@ -1,0 +1,119 @@
+/*Contenedor para agregar palabras*/
+.contenedor-agregar-palabra{
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    top: -10rem;
+    width: 60%;
+}
+
+.input-texto{
+
+    background: #F3F5FC;
+    border: none;
+    color: #0A3871;
+    font-size: 2rem;
+    line-height: 150%;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.input-texto::placeholder{
+
+    color: #0A3871;
+}
+
+/*Mensaje de error o de que se guardo*/
+.mensaje-a-mostrar{
+
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+/*Contenedor de advertencia*/
+.contenedor-advertencia{
+
+    align-items: center;
+    display: flex;
+    margin: 5rem 0 1rem 0;
+}
+
+.logo_advertencia{
+
+    margin-right: 1rem;
+}
+
+.descripcion_advertencia{
+
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/*Fin de Contenedor de advertencia*/
+
+/*Inicio de contenedor de botones*/
+.contenedor-botones-agregar{
+
+    align-items: center;
+    display: flex;
+}
+
+.boton-guardar{
+
+    background: #0A3871;
+    border: none;
+    border-radius: 24px;
+    color: #ffffff;
+    font-size: 1rem;
+    height: 67px;
+    margin-right: 2rem;
+    width: 332px;
+}
+
+.boton-cancelar{
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    font-size: 1rem;
+    height: 67px;
+    width: 332px;
+}
+
+
+/*Haciendo responsivo para celular*/
+
+@media screen and (max-width: 376px) {
+    .contenedor-agregar-palabra{
+
+        width: 100%;
+    }
+
+    .contenedor-botones-agregar{
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .boton-guardar{
+
+        margin: 0 0 1rem 0;
+    }
+}
+
+/*Haciendo responsivo para tablet*/
+
+@media screen and (min-width: 377px) and (max-width: 768px){
+
+    .contenedor-agregar-palabra{
+
+        margin: 0 auto;
+        width: 90%;
+    }
+    .contenedor-advertencia{
+
+        margin: 10rem 0 1rem 0;
+    }
+}

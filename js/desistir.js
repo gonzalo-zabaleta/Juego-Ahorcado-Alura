@@ -1,5 +1,5 @@
 //Declaración del boton desistir con su respectiva función.
-var botonDesistir = document.getElementById("boton-desistir");
+const botonDesistir = document.getElementById("boton-desistir");
 botonDesistir.addEventListener("click", terminar);
 
 //Función para terminar el juego y dar a conocer la palabra en caso de que no se haya adivinado.

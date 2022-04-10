@@ -1,0 +1,37 @@
+.encabezado{
+
+    margin: 0 auto;
+    width: 80%;
+}
+
+.enlace-encabezado{
+
+    text-decoration: none;
+}
+
+.logo-alura{
+
+    padding: 2.5rem 0;
+}
+
+@media screen and (max-width: 376px) {
+
+    .encabezado{
+
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 377px) and (max-width: 768px) {
+    
+    .encabezado{
+
+        width: 100%;
+    }
+
+    .logo-alura{
+
+        padding-left: 2.5rem;
+    }
+}

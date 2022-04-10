@@ -1,0 +1,24 @@
+.principal{
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media screen and (max-width: 376px) {
+
+    .principal{
+
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px){
+
+    .principal{
+
+        width: 100%;
+    }
+}

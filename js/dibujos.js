@@ -1,6 +1,6 @@
 //Declaración del canvas y para poder dibujar en él.
-var canvas = document.getElementById("canvas");
-var pincel = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const pincel = canvas.getContext("2d");
 
 //Dibujo de la horca.
 function horca(){
