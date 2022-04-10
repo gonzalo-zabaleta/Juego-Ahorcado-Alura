@@ -145,13 +145,8 @@ function verificarLetraPresionada(event){
     if (!terminarJuego){
 
         let letraIngresada = event.key.toUpperCase();
-        console.log("La letra ingresada es: " + letraIngresada);
 
         if (verificarTeclaPresionada(letraIngresada)){
-
-            console.log("Verificaion de la letra: ");
-            console.log("Letras correctas: " + letrasCorrectas.length);
-            console.log("Letras incorrectas: " + letrasIncorrectas.length);
 
             if(!letraRepetida(letraIngresada)){
         
