@@ -164,7 +164,6 @@ function verificarLetraPresionada(event){
             dibujarMensaje("red", "Por favor, ingrese una letra.");
         }
 
-        console.log("Terminar juego es: " + terminarJuego)
         if(verificarFinal()){
             document.removeEventListener("keydown", verificarLetraPresionada);
         }
@@ -173,6 +172,64 @@ function verificarLetraPresionada(event){
         document.removeEventListener("keydown", verificarLetraPresionada);
     }
 }
+
+//Declarando input y boton para celular.
+const inputCelular = document.getElementById("input-letra-celular");
+const botonEnviarCelular = document.getElementById("boton_enviar-celular");
+
+//Función para verificar la letra ingresadas por celular.
+function verificarLetraPresionadaCelular(evento){
+
+    evento.preventDefault();
+
+    let letra = inputCelular.value.toUpperCase(); 
+    inputCelular.value = "";
+
+    if (!terminarJuego){
+
+        if (verificarTeclaPresionada(letra)){
+
+            if(!letraRepetida(letra)){
+        
+                borrarMensaje();
+                verificarLetra(letra, palabraElejida);
+        
+            } else {
+        
+                borrarMensaje();
+                dibujarMensaje("red", "Ya ingresaste esa letra.");
+            }
+        } else {
+
+            borrarMensaje();
+            dibujarMensaje("red", "Por favor, ingrese una letra.");
+        }
+
+        if(verificarFinal()){
+            
+            botonEnviarCelular.disabled = true;
+        } 
+    }else {
+
+        botonEnviarCelular.disabled = true;
+    }
+}
+
+//Función para según el tamaño de la pantalla se aplica la acción correspondiente.
+function elejirSegunLaPantalla(){
+
+    if (screen.width < 376){
+
+        contenedorJuegoCelular.classList.remove("esconder");
+        contenedorJuegoCelular.classList.add("mostrar");
+        botonEnviarCelular.disabled = false;
+        botonEnviarCelular.addEventListener("click", verificarLetraPresionadaCelular);
+    } else {
+
+        document.addEventListener("keydown", verificarLetraPresionada);
+    }
+}
+
 
 //Función del juego completo.
 function juego(){
@@ -186,5 +243,6 @@ function juego(){
 
     palabraElejida = palabraAleatoria();
     crearGuiones(palabraElejida);
-    document.addEventListener("keydown", verificarLetraPresionada);
+
+    elejirSegunLaPantalla();
 }

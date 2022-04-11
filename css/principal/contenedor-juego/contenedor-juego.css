@@ -9,7 +9,7 @@
 }
 
 /*Input para cuando se inicia en el celular*/
-.input_letra-celular{
+/*.input_letra-celular{
 
     align-items: center;
     background: #F3F5FC;
@@ -19,7 +19,7 @@
     line-height: 150%;
     outline: none;
     width: 100%;
-}
+}*/
 
 /*Contenedor de los botones*/
 .contenedor-botones-juego{

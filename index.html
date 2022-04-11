@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/principal/contenedor_botones-inicio/contenedor_botones-inicio.css">
     <link rel="stylesheet" href="css/principal/contenedor-agregar-palabra/contenedor-agregar-palabra.css">
     <link rel="stylesheet" href="css/principal/contenedor-juego/contenedor-juego.css">
+    <link rel="stylesheet" href="css/principal/contenedor-juego/contenedor-celular/contenedor-celular.css">
 
 </head>
     <body class="base">
@@ -45,7 +46,10 @@
 
             <div id="contenedor-juego" class="contenedor-juego">
                 <canvas id="canvas" class="canvas" width="600px" height="700px"></canvas>
-                <input id="input-letra-celular" class="input_letra-celular" type="text" placeholder="Ingrese la letra">
+                <div id="contenedor-celular" class="contenedor-celular">
+                    <input id="input-letra-celular" class="input_letra-celular" type="text" placeholder="Ingrese una letra" maxlength="1">
+                    <button id="boton_enviar-celular" class="boton_enviar-celular" type="submit">Enviar</button>
+                </div>
                 <div class="contenedor-botones-juego">
                     <input id="boton-nuevoJuego" class="boton-nuevo" type="submit" value="Nuevo juego">
                     <input id="boton-desistir" class="boton-desistir" type="submit" value="Desistir">

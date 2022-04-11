@@ -1,0 +1,27 @@
+.contenedor-celular{
+
+    align-items: center;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.input_letra-celular{
+
+    background: #F3F5FC;
+    border: none;
+    color: #0A3871;
+    font-size: 1.75rem;
+    line-height: 150%;
+    outline: none;
+    width: 70%;
+}
+
+.boton_enviar-celular{
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    font-size: 1rem;
+    height: 67px;
+    width: 30%;
+}
